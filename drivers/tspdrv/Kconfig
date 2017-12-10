@@ -1,0 +1,6 @@
+menu "TouchSense driver support"
+
+config TSPDRV
+	tristate "TouchSense driver support"
+
+endmenu

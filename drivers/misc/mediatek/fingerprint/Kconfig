@@ -1,0 +1,19 @@
+#
+# Tablet driver configuration
+#
+menuconfig INPUT_FINGERPRINT
+	bool "Fingerprint"
+	default n
+	help
+	  Say Y here, and a list of supported fingerprint sensor will be displayed.
+	  This option doesn't affect the kernel.
+
+	  If unsure, say Y.
+
+if INPUT_FINGERPRINT
+
+source "drivers/misc/mediatek/fingerprint/goodix/Kconfig"
+source "drivers/misc/mediatek/fingerprint/oem_nav/Kconfig"
+
+
+endif

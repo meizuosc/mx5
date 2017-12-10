@@ -1,0 +1,18 @@
+/*
+** DRV2604 register settings for autocalibration of SEMCO0934 LRA
+**
+*/
+#ifndef ACTUATOR_NAME
+#define ACTUATOR_NAME "SMC0934AA"
+#endif
+    MODE_REG,                       AUTO_CALIBRATION,
+    RATED_VOLTAGE_REG,              0x48,
+    OVERDRIVE_CLAMP_VOLTAGE_REG,    0x89,
+    AUTO_CALI_RESULT_REG,           0x07,
+    AUTO_CALI_BACK_EMF_RESULT_REG,  0x87,
+    FEEDBACK_CONTROL_REG,           0xB5, // FEEDBACK_CONTROL_MODE_LRA | FB_BRAKE_FACTOR_4X | LOOP_RESPONSE_MEDIUM | FEEDBACK_CONTROL_BEMF_LRA_GAIN1,
+    Control1_REG,                   0x17, // STARTUP_BOOST_DISABLED | DEFAULT_DRIVE_TIME,
+    Control2_REG,                   0xB5, // BIDIRECT_INPUT | AUTO_RES_GAIN_HIGH | BLANKING_TIME_SHORT | IDISS_TIME_SHORT,
+    Control3_REG,                   0x80, // NG_Thresh_2,
+    AUTOCAL_MEM_INTERFACE_REG,      0x30, // AUTOCAL_TIME_1000MS,
+    GO_REG,                         GO,

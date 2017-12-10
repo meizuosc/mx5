@@ -1,0 +1,20 @@
+/{
+     bus{
+	I2C2@0x11009000{
+	 status="okay";
+         #address-cells=<1>;
+	 #size-cells = <0>;
+         synaptics_touch@20{
+	 compatible = "synaptics,touch" ;
+         reg= <0x20>;
+         touch_irq=<2>;
+        };
+	fts_touch@49{
+	 compatible = "fts,touch" ;
+         reg= <0x49>;
+         touch_irq=<2>;
+        };	
+	
+      };
+  };
+};

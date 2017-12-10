@@ -1,0 +1,7 @@
+menu "Motor Ti drv drivers"
+	depends on ANDROID_TIMED_OUTPUT
+
+config TI_DRV_MOTOR
+	tristate "Support Ti drv motor"
+	depends on ANDROID_TIMED_OUTPUT
+endmenu 

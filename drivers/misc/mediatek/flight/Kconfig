@@ -1,0 +1,5 @@
+config MTK_FLIGHT
+  bool CONFIG_MTK_FLIGHT
+  default n
+  help
+    CONFIG_MTK_FLIGHT

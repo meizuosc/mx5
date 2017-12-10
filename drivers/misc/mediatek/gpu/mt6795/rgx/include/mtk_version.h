@@ -1,0 +1,7 @@
+#ifndef __MTK_VERSION_H__
+#define __MTK_VERSION_H__
+
+#define MTK_DEBUG_VERSION_STR	"2617562 2718070 3123070" 
+
+#endif
+

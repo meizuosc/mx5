@@ -1,0 +1,16 @@
+/*
+** DRV2604 register settings for initialization of Jinlong 4mm ERM
+**
+*/
+#ifndef ACTUATOR_NAME
+#define ACTUATOR_NAME "JE4"
+#endif
+    MODE_REG,                       MODE_INTERNAL_TRIGGER,
+    RATED_VOLTAGE_REG,              0x3D,
+    OVERDRIVE_CLAMP_VOLTAGE_REG,    0x89,
+    AUTO_CALI_RESULT_REG,           0x04,
+    AUTO_CALI_BACK_EMF_RESULT_REG,  0x8A,
+    FEEDBACK_CONTROL_REG,           0x36,
+    Control1_REG,                   STARTUP_BOOST_ENABLED | 0x17,
+    Control2_REG,                   BIDIRECT_INPUT | AUTO_RES_GAIN_MEDIUM | BLANKING_TIME_SHORT | IDISS_TIME_SHORT,
+    Control3_REG,                   ERM_OpenLoop_Enabled | NG_Thresh_2,
